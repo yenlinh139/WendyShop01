@@ -1,0 +1,120 @@
+@use "sass:map";
+@import "../../style/pages/all";
+
+.title-data {
+    background-color: map.get($theme-color, "white");
+    height: 80px;
+    border-radius: 10px;
+    padding-left: 30px;
+    line-height: 30px;
+    padding-top: 25px;
+    margin: 15px 30px;
+    h3 {
+      font-size: 20px;
+    }
+    a{
+      text-decoration: none;
+      color: map.get($theme-color, "normal-text");
+    }
+}
+.container-data {
+    background-color: map.get($theme-color, "white");
+    border-radius: 10px;
+    line-height: 30px;
+    padding: 25px 30px;
+    margin: 20px 30px;
+    overflow: hidden;
+    h3 {
+      color: map.get($theme-color, "main");
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .button-download {
+      display: flex;
+      button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #6D757D;
+        color: map.get($theme-color, "white");
+        cursor: pointer;
+
+        &:hover {
+          background-color: #42474d;
+        }
+      }
+      .button-left{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .button-right{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+
+    .inputSearch {
+      display: flex;
+      justify-content: flex-end;
+      margin: 10px 20px;
+      line-height: 40px;
+      input{
+        margin-left: 10px;
+        border: 1px solid map.get($theme-color, "border-light");
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+
+    .table {
+      width: 100%;
+      border-top: 1px solid map.get($theme-color, "border-light");
+    }
+
+    .table th,
+    .table td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid map.get($theme-color, "border-light");
+      font-size: 13px;
+    }
+
+    .table th {
+      background-color: map.get($theme-color, "white");
+      font-weight: 700;
+
+      .iconSoft {
+        cursor: pointer;
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    .table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .table tbody tr:hover {
+      background-color: #e9e9e9;
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding-top: 20px;
+
+      
+      a {
+        padding: 5px 10px 5px;
+        border: 0.5px solid map.get($theme-color, "border-light");
+
+        &:hover {
+          background-color: map.get($theme-color, "main");
+          color: #fff;
+        }
+      }
+    }    
+}

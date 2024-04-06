@@ -1,0 +1,98 @@
+@use "sass:map";
+@import "../../../style/pages/all";
+
+.header {
+    
+  .header-left {
+    padding-left: 20px;
+    display: flex;
+      align-items: center;
+    
+      .sidebar-button {
+        display: none; 
+        border: none;
+        padding: 0 20px;
+        cursor: pointer;
+        color: #0B132B;
+        background: none;
+      }
+      
+      @media (max-width: 922px) {
+        .sidebar-button {
+          display: block;
+        }
+      }
+  }
+
+
+  .header-right {
+    display: flex; 
+    padding: 0; 
+    justify-content: flex-end;
+    padding-right: 40px;
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      
+      .dropdown-toggle {
+        background-color: #fff;
+        color:  map.get($theme-color, "main");
+        border: none;
+        padding: 8px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        outline: none;
+      }
+    
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 15px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        display: none;
+    
+        &.show {
+          display: block;
+        }
+    
+        .dropdown-item {
+          color: map.get($theme-color, "main");
+          padding: 0px 16px;
+          text-decoration: none;
+          display: block;
+          cursor: pointer;
+    
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+.toggle-btn {
+  padding-right: 10px;
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+@media (max-width: 993px) {
+  .header {
+    width: 100%;
+  }
+ 
+}

@@ -1,0 +1,71 @@
+@use "sass:map";
+@import "../../../style/pages/all";
+
+aside {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    h3{
+      font-size: 26px;
+      color: #fff;
+      border-bottom: 1px solid #000;
+      padding-bottom: 10px;
+      padding: 15px;
+    }
+
+    ul {
+        li {
+            list-style: none;
+            position: relative;
+            
+            a {
+                text-decoration: none;
+                font-size: 22px;
+                color: map.get($theme-color, "white");
+                letter-spacing: 1px;
+                transition: all 0.3s;
+                padding: 15px;
+                display: block;
+                &:hover {
+                    color: map.get($theme-color, "main");
+                    background-color: map.get($theme-color, "white");
+                }
+            }
+            
+        }
+        li:hover .header-menu-dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        .header-menu-dropdown {
+            background-color: #450b23;
+            display: block;
+            position: absolute;
+            width: 280px;
+            z-index: 9;
+            padding: 5px 0;
+            transform: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+
+            li{
+                a{
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: map.get($theme-color, "white");
+                    letter-spacing: 1px;
+                    transition: all 0.3s;
+                    padding: 15px 50px;
+                    display: block;
+                    &:hover {
+                        color: map.get($theme-color, "main");
+                        background-color: map.get($theme-color, "white");
+                    }
+                }
+            }
+        }
+    }
+  }
